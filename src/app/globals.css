@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.image-cover {
+  animation: opens 5s;
+  animation-delay: 1s;
+}
+.image-back {
+  animation: blurr 7s infinite;
+  animation-delay: 2s;
+}
+@keyframes blurr {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+@keyframes opens {
+  from {
+    right: 0;
+    width: 100%;
+  }
+  to {
+    right: 0;
+    width: 0;
+  }
+}
+
+@keyframes homeBgText {
+  0%,
+  10%,
+  100% {
+    background-position: -18rem 0;
+  }
+  65%,
+  85% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes homeCursorText {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  65%,
+  78%,
+  85% {
+    width: 100%;
+    opacity: 1;
+  }
+  75%,
+  81% {
+    opacity: 0;
+  }
+}
+.circle-img {
+  animation: circleImage 10s infinite linear;
+}
+
+@keyframes circleImage {
+  0% {
+    transform: rotate(0deg);
+  }
+  35% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(75deg);
+  }
+  60% {
+    transform: rotate(150deg);
+  }
+  80% {
+    transform: rotate(140deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
