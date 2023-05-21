@@ -2,6 +2,12 @@ import { UserType } from "@/interfaces";
 import SocialMedia from "@/components/social-media";
 import Image from "next/image";
 import Scroll from "@/components/layout/scroll";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Page About",
+  description: "Welcome to the resume of irsan mansyur",
+};
 
 export default function About() {
   const user: UserType = {
