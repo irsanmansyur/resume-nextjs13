@@ -5,7 +5,7 @@ import NavLayout from "./navigate.layout";
 import { DarkModeToggle } from "../darkmode";
 
 type Props = { user: UserType };
-export const Navbar = ({ user, ...props }: Props) => {
+export const Navbar = ({ user }: Props) => {
   return (
     <header className="font-bold fixed top-0 left-0 right-0 z-50 py-1 md:py-5 border-b md:border-b-0 border-default bg-slate-200/20 md:!bg-transparent dark:bg-slate-900/50 backdrop-blur">
       <div className="container flex flex-row justify-between items-center">

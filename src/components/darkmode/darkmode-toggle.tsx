@@ -2,8 +2,7 @@
 import { Icon } from "@iconify/react";
 import { useTheme } from "next-themes";
 export const DarkModeToggle = () => {
-  const { theme, setTheme, systemTheme } = useTheme();
-  let currentTheme = theme === "system" ? systemTheme : theme;
+  const { theme, setTheme } = useTheme();
 
   const changeTheme = () => {
     if (theme == "system") return setTheme("dark");

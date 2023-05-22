@@ -27,7 +27,7 @@ export default function Navbar2() {
           <NavLink
             targetSegment={null}
             href="/"
-            onClick={(e) => setIsOpen(false)}
+            onClick={() => setIsOpen(false)}
             className="group w-full flex items-center gap-x-1.5 py-1.5 text-sm tracking-tight transition px-0 hover:bg-red-800"
           >
             Home
@@ -35,7 +35,7 @@ export default function Navbar2() {
           <NavLink
             targetSegment={"about"}
             href="/about"
-            onClick={(e) => setIsOpen(false)}
+            onClick={() => setIsOpen(false)}
             className="group w-full flex items-center gap-x-1.5 py-1.5 text-sm tracking-tight transition px-0"
           >
             About
@@ -43,7 +43,7 @@ export default function Navbar2() {
           <NavLink
             targetSegment={"education"}
             href="/education"
-            onClick={(e) => setIsOpen(false)}
+            onClick={() => setIsOpen(false)}
             className="group w-full flex items-center gap-x-1.5 py-1.5 text-sm tracking-tight transition px-0"
           >
             Education
@@ -51,7 +51,7 @@ export default function Navbar2() {
           <NavLink
             targetSegment={"skill"}
             href="/skill"
-            onClick={(e) => setIsOpen(false)}
+            onClick={() => setIsOpen(false)}
             className="group w-full flex items-center gap-x-1.5 py-1.5 text-sm tracking-tight transition px-0"
           >
             Skill
@@ -59,7 +59,7 @@ export default function Navbar2() {
           <NavLink
             targetSegment={"contact"}
             href="/contact"
-            onClick={(e) => setIsOpen(false)}
+            onClick={() => setIsOpen(false)}
             className="group w-full flex items-center gap-x-1.5 py-1.5 text-sm tracking-tight transition px-0"
           >
             Contact

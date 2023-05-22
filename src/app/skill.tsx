@@ -2,8 +2,7 @@
 
 import { styled } from "styled-components";
 
-type Props = {};
-export const Skill = ({ ...props }: Props) => {
+export const Skill = () => {
   return (
     <DivStyled className="relative ">
       <h2 className="md:text-4xl font-bold flex md:items-center md:gap-4 flex-col md:flex-row ">

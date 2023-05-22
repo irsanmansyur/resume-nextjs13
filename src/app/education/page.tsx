@@ -1,14 +1,8 @@
-import { UserType } from "@/interfaces";
 import EducationCard from "./education-card";
 import ExperienceCard from "./experience-card";
 import Scroll from "@/components/layout/scroll";
 
 export default function Home() {
-  const user: UserType = {
-    name: "Irsan",
-    about:
-      "I am someone who deals in the field of web programming, I am a disciplined person, hard worker, able to work on a project on time and consistently to a job that is assigned to me",
-  };
   return (
     <section className="py-20 space-y-10 min-h-screen container">
       <h1 className="title text-5xl font-semibold text-center pt-10">

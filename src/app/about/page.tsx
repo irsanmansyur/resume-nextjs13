@@ -1,5 +1,3 @@
-import { UserType } from "@/interfaces";
-import SocialMedia from "@/components/social-media";
 import Image from "next/image";
 import Scroll from "@/components/layout/scroll";
 import { Metadata } from "next";
@@ -10,11 +8,6 @@ export const metadata: Metadata = {
 };
 
 export default function About() {
-  const user: UserType = {
-    name: "Irsan",
-    about:
-      "I am someone who deals in the field of web programming, I am a disciplined person, hard worker, able to work on a project on time and consistently to a job that is assigned to me",
-  };
   return (
     <section className="py-20 space-y-4 min-h-screen container">
       <h1 className="title text-5xl font-semibold text-center pt-10">

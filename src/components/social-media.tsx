@@ -1,8 +1,7 @@
 "use client";
 import { Icon } from "@iconify/react";
 
-type Props = {};
-export const SocialMedia = ({ ...props }: Props) => {
+export const SocialMedia = () => {
   return (
     <div className="social-media flex items-center gap-6">
       <button

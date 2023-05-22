@@ -3,7 +3,7 @@ type Props = {
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export async function generateMetadata({ params, searchParams }: Props) {
+export async function generateMetadata({ params }: Props) {
   // read route params
   const id = params.id;
   return {
@@ -11,7 +11,7 @@ export async function generateMetadata({ params, searchParams }: Props) {
   };
 }
 
-export default function Page({ params, searchParams }: Props) {
+export default function Page({ params }: Props) {
   const id = params.id;
-  return <div className="py-20 flex justify-center items-center h-[calc(100vh+200px)]">Welcome</div>;
+  return <div className="py-20 flex justify-center items-center h-[calc(100vh+200px)]">Welcome {id}</div>;
 }
