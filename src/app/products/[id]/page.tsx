@@ -13,5 +13,5 @@ export async function generateMetadata({ params, searchParams }: Props) {
 
 export default function Page({ params, searchParams }: Props) {
   const id = params.id;
-  return <div>Welcome</div>;
+  return <div className="py-20 flex justify-center items-center h-[calc(100vh+200px)]">Welcome</div>;
 }

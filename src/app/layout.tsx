@@ -86,7 +86,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <ThemeProviderCustom>
             <Navbar user={{ name: "Irsan", about: "" }} />
             <main className="relative">{children}</main>
-            <div className="absolute h-[300px] w-[480px] -translate-x-1/2 rounded-full bg-gradient-radial from-slate-400 to-transparent blur-2xl top-0 translate-y-1/2  z-[-1]"></div>
+            <div className="absolute h-[200px] w-[380px] max-w-[50%] overflow-hidden sm:-translate-x-1/2 translate-x-full  rounded-full bg-gradient-radial from-slate-400 to-transparent blur-2xl top-0 translate-y-1/2  z-[-1]"></div>
           </ThemeProviderCustom>
         </SidebarProvider>
       </body>

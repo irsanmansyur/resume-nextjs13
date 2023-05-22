@@ -6,6 +6,18 @@
   @apply bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-400 transition-colors duration-500;
 }
 
+.border-default {
+  @apply border-slate-200 dark:border-slate-800;
+}
+
+.arrow-border {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent; /* Adjust the size of the arrow */
+  border-right: 10px solid transparent; /* Adjust the size of the arrow */
+  border-bottom: 10px solid #000; /* Adjust the size and color of the arrow */
+}
+
 .image-cover {
   animation: opens 5s;
   animation-delay: 1s;

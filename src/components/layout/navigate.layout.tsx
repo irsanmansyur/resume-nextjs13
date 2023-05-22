@@ -4,9 +4,9 @@ import React, { useContext } from "react";
 import { NavLink } from "./navlink";
 
 export default function NavLayout() {
-  const { isOpen, setIsOpen } = useContext(SidebarContext);
+  const { setIsOpen } = useContext(SidebarContext);
   return (
-    <nav className={`flex md:gap-5  flex-col md:flex-row md:items-center md:pt-0 -z-[1] ${!isOpen ? "hidden md:flex" : "translate-y-0 border-t border-slate-500"}`}>
+    <nav className={`hidden md:flex gap-5 flex-row items-center`}>
       <NavLink targetSegment={null} href="/" onClick={(e) => setIsOpen(false)}>
         Home
       </NavLink>

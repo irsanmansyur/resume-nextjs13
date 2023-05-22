@@ -13,7 +13,11 @@ export function NavLink({ children, targetSegment, className, ...props }: Props)
   return (
     <Link
       {...props}
-      className={twMerge("hover:text-primary transition-colors duration-300 ease-linear p-2", className, `${activeSegment === targetSegment ? "text-primary" : ""}`)}
+      className={twMerge(
+        "transition-colors duration-300 ease-linear p-2 hover:text-slate-900  dark:hover:text-slate-50",
+        `${activeSegment === targetSegment ? "text-primary" : ""}`,
+        className
+      )}
     >
       {children}
     </Link>

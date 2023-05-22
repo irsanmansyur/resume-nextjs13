@@ -1,0 +1,26 @@
+name: Linting
+
+on:
+  push:
+    branches:
+      - master # Ganti dengan nama branch yang sesuai
+      - staging
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18.14.0 # Sesuaikan versi Node.js yang Anda gunakan
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Linting
+        run: npm run lint

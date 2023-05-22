@@ -18,7 +18,7 @@ export default function Skill() {
         My <span className="text-primary"> Skill</span>
       </h1>
       <div className="program-framework py-10">
-        <h3 className="text-xl md:text-3xl text-center font-bold mb-4 text-slate-200">Programin Language / Framework</h3>
+        <h3 className="text-xl md:text-3xl text-center font-bold mb-4">Programin Language / Framework</h3>
         <div className="body">
           <div className="rounded border-2 border-primary p-3 flex flex-wrap">
             {skills.map((skill, i) => {
