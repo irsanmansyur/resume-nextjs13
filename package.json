@@ -10,7 +10,7 @@
   },
   "engines": {
     "node": ">=18.0.0",
-    "npm": "please-use-npm"
+    "npm": ">=9"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
@@ -18,10 +18,12 @@
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
+    "dotenv": "^16.0.3",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
     "next": "13.4.3",
     "next-themes": "npm:@wits/next-themes@^0.2.16",
+    "node-telegram-bot-api": "^0.61.0",
     "postcss": "8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -31,6 +33,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@iconify/react": "^4.1.0"
+    "@iconify/react": "^4.1.0",
+    "@types/node-telegram-bot-api": "^0.61.6"
   }
 }
