@@ -5,7 +5,9 @@ import axios from 'axios';
 import { useState } from 'react';
 import Lottie from 'lottie-react';
 import congratulationAnimate from '../../animations/congratulations.json';
+import { Icon } from '@iconify/react';
 export const FormContactPage = () => {
+  const [progress, setProgress] = useState<boolean>(false);
   const [successSend, setSuccessSend] = useState<string | null>();
   const [errors, setErrors] = useState<Record<string, any>>({});
   const [data, setData] = useState<Prisma.QuestionsCreateInput>({
@@ -17,6 +19,7 @@ export const FormContactPage = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setErrors({});
+    setProgress(true);
     axios
       .post('/api/question', data)
       .then(() => {
@@ -26,6 +29,9 @@ export const FormContactPage = () => {
       .catch((err) => {
         const { response } = err;
         if (response && response['data']['errors']) setErrors(response['data']['errors']);
+      })
+      .finally(() => {
+        setProgress(false);
       });
   };
 
@@ -113,8 +119,14 @@ export const FormContactPage = () => {
       <div className="flex justify-center">
         <button
           type="submit"
+          disabled={progress}
           className="tracking-widest  relative border-2 border-primary rounded p-2  font-bold z-[1] overflow-hidden before:transition before:duration-500 before:w-full before:translate-x-0 before:hover:-translate-x-full before:z-[-1] before:absolute  before:top-0 before:left-0 before:h-full before:bg-primary px-10 hover:text-primary text-white"
         >
+          {progress && (
+            <div className="absolute inset-0  flex justify-center items-center">
+              <Icon icon="ph:spinner-bold" className="h-6 w-6 animate-spin" />
+            </div>
+          )}
           Submit
         </button>
       </div>
