@@ -1,13 +1,15 @@
-import Image from "next/image";
-import Scroll from "@/components/layout/scroll";
-import { Metadata } from "next";
+import Image from 'next/image';
+import Scroll from '@/components/layout/scroll';
+import { Metadata } from 'next';
+import { userProvider } from '@/utils/providers';
 
 export const metadata: Metadata = {
-  title: "Page About",
-  description: "Welcome to the resume of irsan mansyur",
+  title: 'Page About',
+  description: 'Welcome to the resume of irsan mansyur',
 };
 
-export default function About() {
+export default async function About() {
+  const user = await userProvider().getUser();
   return (
     <section className="py-20 space-y-4 min-h-screen container">
       <h1 className="title text-5xl font-semibold text-center pt-10">
@@ -20,7 +22,7 @@ export default function About() {
             width={500}
             height={500}
             alt="Picture of the Irsan Mansyur"
-            style={{ width: "auto", height: "auto" }}
+            style={{ width: 'auto', height: 'auto' }}
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 !w-[200px] !h-[200px] rounded-full border-primary border-2"
           />
           <div className="circle-img  w-[230px] h-[230px] rounded-full border-4 border-x-primary border-y-transparent"></div>
@@ -30,11 +32,8 @@ export default function About() {
         <span className="font-extrabold text-2xl md:text-4xl text-primary">Develover</span>
         <span className="whitespace-nowrap">`Frontend` || `Backend `</span>
       </h2>
-      <div className="content space-y-6">
-        <p className="text-center">
-          I am someone who deals in the field of web programming, I am a disciplined person, hard worker, able to work on a project on time and consistently to a job that is
-          assigned to me
-        </p>
+      <div className="content space-y-6 max-w-xl mx-auto">
+        <p className="text-center font-monolisa text-justify">{user.about}</p>
         <center>
           <button className="tracking-widest bg-transparent relative border-2 border-primary rounded p-2  font-bold z-[1] overflow-hidden before:transition before:duration-500 before:w-full before:-translate-x-full before:hover:translate-x-0 before:z-[-1] before:absolute  before:top-0 before:left-0 before:h-full before:bg-primary">
             Read more

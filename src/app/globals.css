@@ -1,3 +1,4 @@
+@import './styles/home.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,7 +8,7 @@
 }
 
 .border-default {
-  @apply border-slate-200 dark:border-slate-800;
+  @apply border-slate-200 dark:border-slate-600;
 }
 
 .arrow-border {
@@ -19,12 +20,10 @@
 }
 
 .image-cover {
-  animation: opens 5s;
-  animation-delay: 1s;
+  animation: opens 2s;
 }
 .image-back {
   animation: blurr 7s infinite;
-  animation-delay: 2s;
 }
 @keyframes blurr {
   0% {
@@ -48,35 +47,6 @@
   }
 }
 
-@keyframes homeBgText {
-  0%,
-  10%,
-  100% {
-    background-position: -18rem 0;
-  }
-  65%,
-  85% {
-    background-position: 0 0;
-  }
-}
-
-@keyframes homeCursorText {
-  0%,
-  10%,
-  100% {
-    width: 0;
-  }
-  65%,
-  78%,
-  85% {
-    width: 100%;
-    opacity: 1;
-  }
-  75%,
-  81% {
-    opacity: 0;
-  }
-}
 .circle-img {
   animation: circleImage 10s infinite linear;
 }

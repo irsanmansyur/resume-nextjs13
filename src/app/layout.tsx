@@ -4,6 +4,8 @@ import { Inter } from 'next/font/google';
 import { Metadata } from 'next';
 import { SidebarProvider, ThemeProviderCustom } from '@/context';
 import dotenv from 'dotenv';
+import { Monolisa } from './fonts';
+import { userProvider } from '@/utils/providers';
 
 dotenv.config();
 const linkWeb = 'https://resume-nextjs13.vercel.app';
@@ -36,26 +38,8 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      {
-        url: '/ico/android-icon-192x192.png',
-        type: 'image/png',
-        sizes: '192x192',
-      },
-      {
-        url: '/ico/favicon-32x32.png',
-        type: 'image/png',
-        sizes: '32x32',
-      },
-      {
-        url: '/ico/favicon-16x16.png',
-        type: 'image/png',
-        sizes: '16x16',
-      },
-      {
-        url: '/ico/favicon-96x96.png',
-        type: 'image/png',
-        sizes: '96x96',
-      },
+      { url: '/favicon/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/favicon/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
     ],
     shortcut: ['/ico/ms-icon-150x150.png'],
     apple: [{ url: '/ico/apple-icon.png' }, { url: '/ico/apple-icon-180x180.png', sizes: '180x180', type: 'image/png' }],
@@ -77,13 +61,14 @@ export const metadata: Metadata = {
 };
 
 const inter = Inter({ subsets: ['latin'] });
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const user = await userProvider().getUser();
   return (
-    <html lang="en" className="light" style={{ colorScheme: 'light' }}>
+    <html lang="en" className={`light ${Monolisa.variable}`} style={{ colorScheme: 'light' }}>
       <body className={inter.className + ' bg-default text-slate-100'}>
         <SidebarProvider>
           <ThemeProviderCustom>
-            <Navbar user={{ name: 'Irsan', about: '' }} />
+            <Navbar user={user} />
             <main className="relative">{children}</main>
             <div className="absolute h-[200px] w-[380px] max-w-[50%] overflow-hidden sm:-translate-x-1/2 translate-x-full  rounded-full bg-gradient-radial from-slate-400 to-transparent blur-2xl top-0 translate-y-1/2  z-[-1]"></div>
           </ThemeProviderCustom>
