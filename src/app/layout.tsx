@@ -1,6 +1,5 @@
 import { Navbar } from '@/components/layout';
 import './globals.css';
-import { Inter } from 'next/font/google';
 import { Metadata } from 'next';
 import { SidebarProvider, ThemeProviderCustom } from '@/context';
 import dotenv from 'dotenv';
@@ -64,8 +63,8 @@ const inter = Inter({ subsets: ['latin'] });
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const user = await userProvider().getUser();
   return (
-    <html lang="en" className={`light ${Monolisa.variable}`} style={{ colorScheme: 'light' }}>
-      <body className={inter.className + ' bg-default text-slate-100'}>
+    <html lang="en">
+      <body className={Monolisa.variable + ' bg-default text-slate-100'}>
         <SidebarProvider>
           <ThemeProviderCustom>
             <Navbar user={user} />
