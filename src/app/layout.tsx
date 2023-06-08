@@ -59,7 +59,6 @@ export const metadata: Metadata = {
   bookmarks: [linkWeb],
 };
 
-const inter = Inter({ subsets: ['latin'] });
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const user = await userProvider().getUser();
   return (
