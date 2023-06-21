@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 
 export default async function About() {
   const user = await userProvider().getUser();
+  if (!user) return <></>;
   return (
     <section className="py-20 space-y-4 min-h-screen container">
       <h1 className="title text-5xl font-semibold text-center pt-10">
