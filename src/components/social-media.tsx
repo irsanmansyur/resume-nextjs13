@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import IconSosmed from './sosmed/icon';
+import { TSosmed } from '@/interfaces';
 
-type Props = { sosmed: Record<string, any>[] };
+type Props = { sosmed: TSosmed[] };
 export const SocialMedia = ({ sosmed }: Props) => {
   return (
     <div className="social-media flex items-center gap-6">

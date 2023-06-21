@@ -1,16 +1,16 @@
 'use client';
 import { InputErrorMessage } from '@/components/forms';
-import { Prisma } from '@prisma/client';
-import axios from 'axios';
 import { useState } from 'react';
 import Lottie from 'lottie-react';
 import congratulationAnimate from '../../animations/congratulations.json';
 import { Icon } from '@iconify/react';
+import { TQuestion } from '@/interfaces/setting.type';
+import axios from 'axios';
 export const FormContactPage = () => {
   const [progress, setProgress] = useState<boolean>(false);
   const [successSend, setSuccessSend] = useState<string | null>();
   const [errors, setErrors] = useState<Record<string, any>>({});
-  const [data, setData] = useState<Prisma.QuestionsCreateInput>({
+  const [data, setData] = useState<TQuestion>({
     name: '',
     email: '',
     subject: '',

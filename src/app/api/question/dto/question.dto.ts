@@ -1,5 +1,5 @@
+import { TQuestion } from '@/interfaces/setting.type';
 import { formatZodError } from '@/utils/validate/helper.validate';
-import { Prisma } from '@prisma/client';
 import { ZodError, z } from 'zod';
 
 export const questionZ = z.object({
@@ -10,7 +10,7 @@ export const questionZ = z.object({
 });
 
 export const questionValidate = <T>(input: T) => {
-  const { success, error = null, data } = questionZ.safeParse(input) as { success: boolean; error: ZodError; data: Prisma.QuestionsCreateInput };
+  const { success, error = null, data } = questionZ.safeParse(input) as { success: boolean; error: ZodError; data: TQuestion };
   const errorObject = formatZodError(error);
 
   return { success, error: errorObject, data };

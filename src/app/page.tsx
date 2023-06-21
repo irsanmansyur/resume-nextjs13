@@ -43,7 +43,7 @@ export default async function Home() {
             </div>
             <div className="flex items-center md:items-start flex-col md:mt-20 gap-3 w-full">
               <Image src="/images/irsan-home1-crop.png" width={2000} height={2000} alt="Picture of the author" className=" md:hidden w-full max-w-[70%]" />
-              <SocialMedia sosmed={user.Settings[0].data as any[]} />
+              <SocialMedia sosmed={user.sosmed} />
             </div>
           </div>
         </div>
