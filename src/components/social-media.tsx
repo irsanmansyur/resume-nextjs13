@@ -3,7 +3,7 @@ import IconSosmed from './sosmed/icon';
 import { TSosmed } from '@/interfaces';
 
 type Props = { sosmed: TSosmed[] };
-export const SocialMedia = ({ sosmed }: Props) => {
+export const SocialMedia = ({ sosmed = [] }: Props) => {
   return (
     <div className="social-media flex items-center gap-6">
       {sosmed.map((sm: Record<string, any>, i) => {
