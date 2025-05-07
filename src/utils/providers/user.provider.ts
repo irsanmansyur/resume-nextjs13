@@ -1,4 +1,4 @@
-import { EGender, TUser } from '@/interfaces';
+import { TUser } from '@/interfaces';
 
 export function userProvider() {
   const getUser = async () => {
@@ -8,7 +8,7 @@ export function userProvider() {
       username: 'chank',
       email: 'irsan00mansyur@gmail.com',
       password: '',
-      gender: EGender.MALE,
+      gender: 'male',
       about: 'saya seorang pengembang web. mahir menggunakan php dan nodejs, saya bisa menggunakan framework codeigniter dan laravel, untuk nodejs saya menggunakan nestjs, reactjs, jquery dan nextjs, dll',
       sosmed: [{ name: 'Facebook', url: 'https://facebook.com/ichank00' }],
     };
