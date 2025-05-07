@@ -1,9 +1,10 @@
 type Props = {
-  params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata(props: Props) {
+  const params = await props.params;
   // read route params
   const id = params.id;
   return {
@@ -11,7 +12,8 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default function Page({ params }: Props) {
+export default async function Page(props: Props) {
+  const params = await props.params;
   const id = params.id;
   return <div className="py-20 flex justify-center items-center h-[calc(100vh+200px)]">Welcome {id}</div>;
 }
