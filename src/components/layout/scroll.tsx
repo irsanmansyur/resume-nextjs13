@@ -11,9 +11,14 @@ type Props = {
 export default function Scroll({ back, next }: Props) {
   const [client, setClient] = useState(false);
   useEffect(() => {
-    setClient(true);
-  }, []);
-  if (!client) return <></>;
+    if (client === false) {
+      setClient(true);
+      return () => {};
+    }
+    return () => {};
+  }, [client]);
+  if (client === false) return <></>;
+
   return <ScrollClient back={back} next={next} />;
 }
 function ScrollClient({ back, next }: Props) {
