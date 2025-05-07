@@ -40,6 +40,14 @@ export default async function Home() {
                   Let&apos;s Talk
                 </Link>
               </div>
+              <div className="flex gap-6 items-center">
+                <Link
+                  href="https://drive.google.com/file/d/1RswkPj0oI9dkwT1wLAd60EMHhGLeO5lx/view?usp=sharing"
+                  className="tracking-widest bg-transparent relative border-2 border-primary rounded p-2 text-primary hover:text-slate-100 font-bold z-[1] overflow-hidden before:transition before:duration-500 before:h-full before:-translate-y-full before:hover:translate-y-0 before:z-[-1] before:absolute before:bottom-0 before:left-0 before:w-full before:bg-primary"
+                >
+                  Download CV
+                </Link>
+              </div>
             </div>
             <div className="flex items-center md:items-start flex-col md:mt-20 gap-3 w-full">
               <Image src="/images/irsan-home1-crop.png" width={2000} height={2000} alt="Picture of the author" className=" md:hidden w-full max-w-[70%]" />
