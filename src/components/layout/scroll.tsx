@@ -25,29 +25,29 @@ function ScrollClient({ back, next }: Props) {
   const router = useRouter();
 
   useEffect(() => {
-    if (typeof document !== 'undefined' && document?.documentElement) {
-      const handleScroll = (event: any) => {
-        const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
-        if (event.deltaY < 0) {
-          if (scrollTop === 0) {
-            console.log('Anda telah mencapai bagian paling atas');
-            if (back) router.push(back);
-          }
-        } else if (event.deltaY > 0) {
-          console.log('Anda melakukan scroll ke bawah');
-          if (scrollTop + clientHeight >= scrollHeight) {
-            console.log('Anda telah mencapai bagian paling bawah');
-            if (next) router.push(next);
-          }
-          // Lakukan sesuatu ketika scroll ke bawah terdeteksi
-        }
-      };
+    // if (typeof document !== 'undefined' && document?.documentElement) {
+    //   const handleScroll = (event: any) => {
+    //     const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
+    //     if (event.deltaY < 0) {
+    //       if (scrollTop === 0) {
+    //         console.log('Anda telah mencapai bagian paling atas');
+    //         if (back) router.push(back);
+    //       }
+    //     } else if (event.deltaY > 0) {
+    //       console.log('Anda melakukan scroll ke bawah');
+    //       if (scrollTop + clientHeight >= scrollHeight) {
+    //         console.log('Anda telah mencapai bagian paling bawah');
+    //         if (next) router.push(next);
+    //       }
+    //       // Lakukan sesuatu ketika scroll ke bawah terdeteksi
+    //     }
+    //   };
 
-      document.addEventListener('wheel', handleScroll);
-      return () => {
-        document.removeEventListener('wheel', handleScroll);
-      };
-    }
+    //   document.addEventListener('wheel', handleScroll);
+    //   return () => {
+    //     document.removeEventListener('wheel', handleScroll);
+    //   };
+    // }
     return () => {};
   }, [back, next, router]);
 
