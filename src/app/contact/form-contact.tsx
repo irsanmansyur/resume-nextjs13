@@ -1,4 +1,5 @@
 'use client';
+
 import { InputErrorMessage } from '@/components/forms';
 import { useState } from 'react';
 import Lottie from 'lottie-react';
@@ -16,6 +17,7 @@ export const FormContactPage = () => {
     subject: '',
     message: '',
   });
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setErrors({});
