@@ -13,7 +13,7 @@ export default function Scroll({ back, next }: Props) {
   useEffect(() => {
     setClient(true);
   }, []);
-  if (!client) return '';
+  if (!client) return <></>;
   return <ScrollClient back={back} next={next} />;
 }
 function ScrollClient({ back, next }: Props) {
