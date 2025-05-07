@@ -25,7 +25,7 @@ function ScrollClient({ back, next }: Props) {
   const router = useRouter();
 
   useEffect(() => {
-    if (typeof document !== 'undefined') {
+    if (typeof document !== 'undefined' && document?.documentElement) {
       const handleScroll = (event: any) => {
         const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
         if (event.deltaY < 0) {
