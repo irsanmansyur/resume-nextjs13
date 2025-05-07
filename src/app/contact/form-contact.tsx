@@ -2,11 +2,12 @@
 
 import { InputErrorMessage } from '@/components/forms';
 import { useState } from 'react';
-import Lottie from 'lottie-react';
+import dynamic from 'next/dynamic';
 import congratulationAnimate from '../../animations/congratulations.json';
-import { Icon } from '@iconify/react';
 import { TQuestion } from '@/interfaces/setting.type';
 import axios from 'axios';
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+import { Icon } from '@iconify/react';
 export const FormContactPage = () => {
   const [progress, setProgress] = useState<boolean>(false);
   const [successSend, setSuccessSend] = useState<string | null>();
