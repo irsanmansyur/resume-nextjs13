@@ -5,12 +5,17 @@ export default function Skill() {
     { name: 'Codeigniter v3 || PHP', level: 95 },
     { name: 'Laravel v7 - (latest) || PHP', level: 90 },
     { name: 'Reactjs (latest) || javascript,typescript', level: 87 },
+    { name: 'Nextjs (latest) || typescript', level: 87 },
+    { name: 'Goland (latest) || typescript', level: 30 },
     { name: 'Nestjs (latest) || typescript', level: 93 },
     { name: 'Express (latest) || typescript', level: 82 },
     { name: 'Flask (latest) || python', level: 70 },
     { name: 'fastapi (latest) || python', level: 75 },
     { name: 'Bootstarp v4 - (latest) || css framework', level: 94 },
     { name: 'TailwindCss v2 - (latest) || css framework', level: 99 },
+    { name: 'Docker Devloyment', level: 87 },
+    { name: 'Setup Server, etc', level: 90 },
+    { name: 'Solving Skill', level: 88 },
   ];
   return (
     <section className="py-20 space-y-10 min-h-screen container">
