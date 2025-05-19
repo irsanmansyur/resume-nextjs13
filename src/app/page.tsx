@@ -44,7 +44,7 @@ export default async function Home() {
                 </div>
                 <div className="flex gap-6 items-center">
                   <Link
-                    href="https://drive.google.com/file/d/1RswkPj0oI9dkwT1wLAd60EMHhGLeO5lx/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1qTph8vXGpZ1gSyzfS7POcBjSDVQ4BEvs/view?usp=sharing"
                     className="tracking-widest bg-transparent relative border-2 border-primary rounded p-2 text-primary hover:text-slate-100 font-bold z-[1] overflow-hidden before:transition before:duration-500 before:h-full before:-translate-y-full before:hover:translate-y-0 before:z-[-1] before:absolute before:bottom-0 before:left-0 before:w-full before:bg-primary"
                   >
                     Download CV
