@@ -9,8 +9,12 @@ export function userProvider() {
       email: 'irsan00mansyur@gmail.com',
       password: '',
       gender: 'male',
-      about: 'saya seorang pengembang web. mahir menggunakan php dan nodejs, saya bisa menggunakan framework codeigniter dan laravel, untuk nodejs saya menggunakan nestjs, reactjs, jquery dan nextjs, dll',
-      sosmed: [{ name: 'Facebook', url: 'https://facebook.com/ichank00' }],
+      about: 'Memiliki keahlian mendalam di bidang Backend Development dengan NestJS (expert) dan Laravel (advanced), serta mahir dalam Frontend Development menggunakan ReactJS dan Next.js',
+      sosmed: [
+        { name: 'linkedin', url: 'https://www.linkedin.com/in/irsanmansyur/' },
+        { name: 'github', url: 'https://github.com/irsanmansyur' },
+        { name: 'Facebook', url: 'https://facebook.com/ichank00' },
+      ],
     };
     return user;
   };

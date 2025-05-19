@@ -1,7 +1,7 @@
-"use client";
-import { SidebarContext } from "@/context";
-import React, { useContext } from "react";
-import { NavLink } from "./navlink";
+'use client';
+import { SidebarContext } from '@/context';
+import React, { useContext } from 'react';
+import { NavLink } from './navlink';
 
 export default function NavLayout() {
   const { setIsOpen } = useContext(SidebarContext);
@@ -10,14 +10,8 @@ export default function NavLayout() {
       <NavLink targetSegment={null} href="/" onClick={() => setIsOpen(false)}>
         Home
       </NavLink>
-      <NavLink targetSegment="about" href="/about" onClick={() => setIsOpen(false)}>
-        About
-      </NavLink>
-      <NavLink targetSegment="education" href="/education" onClick={() => setIsOpen(false)}>
-        Education
-      </NavLink>
-      <NavLink targetSegment="skill" href="/skill" onClick={() => setIsOpen(false)}>
-        Skills
+      <NavLink targetSegment="pendidikan" href="#pendidikan" onClick={() => setIsOpen(false)}>
+        Pendidikan
       </NavLink>
       <NavLink targetSegment="contact" href="/contact" onClick={() => setIsOpen(false)}>
         Contact

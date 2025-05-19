@@ -1,14 +1,29 @@
+'use client';
 import { TUser } from '@/interfaces';
 import { NavLink } from './navlink';
 import RightMenu from './right-menu';
 import NavLayout from './navigate.layout';
-import { DarkModeToggle } from '../darkmode';
+// import { DarkModeToggle } from '../darkmode';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 type Props = { user: TUser };
 export const Navbar = ({ user }: Props) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="font-bold fixed top-0 left-0 right-0 z-50 py-1 md:py-5 border-b md:border-b-0 border-default bg-slate-200/20 md:!bg-transparent dark:bg-slate-900/50 backdrop-blur">
+    <header className={`font-bold fixed top-0 left-0 right-0 z-50 py-1 md:py-5 border-b md:border-b-0 ease-in-out transition-all duration-500  border-default ${isScrolled ? 'bg-slate-200/20 backdrop-blur dark:bg-slate-900/80' : 'md:!bg-transparent'}`}>
       <div className="container flex flex-row justify-between items-center">
         <div className="flex items-center justify-between">
           <NavLink targetSegment="/" href="/" className="flex gap-2 items-center">
@@ -18,7 +33,7 @@ export const Navbar = ({ user }: Props) => {
         </div>
         <NavLayout />
         <div className="flex gap-3">
-          <DarkModeToggle />
+          {/* <DarkModeToggle /> */}
           <RightMenu />
         </div>
       </div>

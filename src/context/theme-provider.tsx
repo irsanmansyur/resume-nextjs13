@@ -11,7 +11,7 @@ export function ThemeProviderCustom({ children }: any) {
   if (!mounted) return <>{children}</>;
 
   return (
-    <ThemeProvider enableSystem={true} attribute={'class'}>
+    <ThemeProvider enableSystem attribute={'class'}>
       {children}
     </ThemeProvider>
   );

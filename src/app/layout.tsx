@@ -62,14 +62,14 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const user = await userProvider().getUser();
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={Monolisa.variable + ' bg-default text-slate-100'}>
         <SidebarProvider>
-          <ThemeProviderCustom>
-            <Navbar user={user} />
-            <main className="relative">{children}</main>
-            <div className="absolute h-[200px] w-[380px] max-w-[50%] overflow-hidden sm:-translate-x-1/2 translate-x-full  rounded-full bg-gradient-radial from-slate-400 to-transparent blur-2xl top-0 translate-y-1/2  z-[-1]"></div>
-          </ThemeProviderCustom>
+          {/* <ThemeProviderCustom> */}
+          <Navbar user={user} />
+          <main className="relative">{children}</main>
+          <div className="absolute h-[200px] w-[380px] max-w-[50%] overflow-hidden sm:-translate-x-1/2 translate-x-full  rounded-full bg-gradient-radial from-slate-400 to-transparent blur-2xl top-0 translate-y-1/2  z-[-1]"></div>
+          {/* </ThemeProviderCustom> */}
         </SidebarProvider>
       </body>
     </html>
