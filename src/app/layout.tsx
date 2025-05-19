@@ -1,7 +1,7 @@
 import { Navbar } from '@/components/layout';
 import './globals.css';
 import { Metadata } from 'next';
-import { SidebarProvider, ThemeProviderCustom } from '@/context';
+import { SidebarProvider } from '@/context';
 import dotenv from 'dotenv';
 import { Monolisa } from './fonts';
 import { userProvider } from '@/utils/providers';
